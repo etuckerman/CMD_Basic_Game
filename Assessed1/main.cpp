@@ -16,12 +16,12 @@ int main() {									  //removed global variables
 	payinitialfee(balance);
 	enteroption(option);
 
-	while ((option != 'Q') && (balance >= 20))	  //check if user still wants to (and is capable to) play
+	while ((option != 'Q') && (balance >= 20))	  //check if user still wants to (and is able to afford to) play
 	{
 		processoption(option, balance);
 		enteroption(option);
 	}
-	cout << "thanks for playing!";
+	cout << "thanks for playing!"; 				  //thankyou message when user quits
 	showbalance(balance);
 
 	return(0);
@@ -65,5 +65,5 @@ void playgame(int& balance) {							   //the game function, charges 20 per go
 }
 
 void showbalance(int balance) {							   //shows the users balance
-	cout << "the current balance is " << balance;
+	cout << " The current balance is " << balance;
 }
